@@ -27,8 +27,8 @@ public class RobotContainer {
   public RobotContainer() {
     // Configure the button bindings
     configureButtonBindings();
-    m_drivetrain.setDefaultCommand(new RunCommand(() -> m_drivetrain.arcadeDrive(
-      m_driverController.getLeftY(), m_driverController.getRightX()), m_drivetrain));
+    m_drivetrain.setDefaultCommand(new RunCommand(() -> m_drivetrain.curvatureDrive(
+      m_driverController.getLeftY(), m_driverController.getRightX(), m_driverController.getAButton()), m_drivetrain));
   }
 
   /**
